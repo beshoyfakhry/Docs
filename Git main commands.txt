@@ -1,0 +1,88 @@
+git hub commands
+ 
+download git hub from https://desktop.github.com/ 
+
+To config the username and password
+
+	git config --global user.name	"username username"
+	git config --global user.email	"username@email"
+	
+To get username email 
+	git config user.email
+	git config user.name
+	
+To get help
+	git help
+
+To get specific help topic
+	git help commit 
+		this will show help in browser with details
+		
+To list the folders and files in folders	
+	ls
+	
+To set the folder as a repository (go for the folder and type)
+	git init
+	
+To show hidden folders and files
+	ls -la
+	
+To include all changes done within folder
+	git add .
+	
+To commit a change and set a message for it
+	git commit -m "the message you want to set"
+	
+To get log of changes done for this folder
+	git log
+	
+To get certain user log
+	git log --authour="username"
+	
+To check if there is any files are not commited in folder
+	git status
+	
+	*************************************************************
+	*	working copy >	 staging area > 	repository			*
+	*		|				|					|				*
+	*	device copy		after add order		after commit order	*
+	*************************************************************
+	
+To get the changes between the file in the repository and my file in working copy
+	git diff
+	
+To get the changes between the file in the repository and my file in stagin area
+	git diff --staged
+	
+To remove a file from folder  (rm --> remove)  moving here is the same as renaming
+	git rm filename.extension
+	
+To rename a file  (mv --> move)
+	git mv oldFileName.extension  newFileName.extension
+
+To move a file
+	git mv fileName.extension  FolderName
+	
+To move a file and change its name 
+	git mv fileName.extension FolderName/NewFileName.extension
+	
+To commit the changes direct to repository instead of moving first to staging
+	git commit -am "the commit comment" 
+**Hint:Use it only when you did a small changes in your files
+
+To get file from repository back to working copy
+	git checkout -- fileName.extension
+
+To get file from certain commit from repository back to working copy
+	git checkout commitNumber -- fileName.extension
+**Hint: commitNumber you will find it in yellow when you ask for git log
+
+To get file from staging area back to working area
+	git reset HEAD fileName.extension
+
+To connect your local repositry with online repositry
+	git remote add NickName Link
+**ie git remote add origin https://github.com/beshoyfakhry/test.git
+
+To push your files to online repository
+	git push -u origin master
